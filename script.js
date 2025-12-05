@@ -38,17 +38,42 @@ function swap(a,b){
 }
 swap(15,25);
 
-//  swaping destructuring array method 3rd method
+//  swaping destructuring array method 3rd method. Eg1 input 5 10   output 10 5
 function swap(a,b){
   console.log(a,b);//no swaping
   [a,b] = [b,a]
   console.log(a,b);  //after swaping
   
 }
-swap(30,20);
+swap(5,10);
 
 // -----------------------------------------------------------------------------------------------------
+ //Write a program that accepts two integers as input and swaps their values. after swaping, return the new values of 
+// the two numbers 
+// Eg1 input 5 10   output 10 5
+// Eg2 input 0 0   output 0 0
+
+function swapNumbers(a, b) {
+  // console.log(`${[a,b]}`);
+  console.log(a,b);
+  [a,b]=[b,a];
+  // return console.log(`${[a,b]}`)
+ return console.log(a,b); 
+}
+swapNumbers(0,0);
 
 
 
 
+// Compound Interest Calculation
+// Accept the principal amount(p), annual interest rate(r), the number of the years(t), and number of times is 
+// compounded per year(n) write a program to calculate the compound Interest. the formula to calculate compound 
+// interest is:  A= P(1 + r/n)^(n*t)  input: 1000, 0.5, 10, 4  output:110199.00
+
+function compoundInterest(P,r,t,n){
+    const  A = P*Math.pow((1 + r/n),(n*t)); 
+   return  console.log((A-P).toFixed(2));
+}
+compoundInterest(1000, 0.5, 10, 4);
+compoundInterest(1500, 0.04, 6, 2);
+ 
